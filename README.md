@@ -13,7 +13,7 @@
 
 - Close menu: `Del`
 - Active ship menu: `Enter`
-- Pause: Keyboard layout dependent; best to remap it.
+- Pause: depends on your keyboard layout. Best to remap it.
 
 ### Speed
 
