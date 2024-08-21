@@ -14,7 +14,7 @@
 - Speed-: `Y`, `Mouse wheel`
 - Stop ship: `Backspace`
 - Mouse steering (toggle): `SHIFT+Space`
-- Mouse steering  (manual): `Hold Left Mouse + Move`
+- Mouse steering (manual): `Hold Left Mouse + Move`
 - Undock: `SHIFT+D`
 - Pick up items: `O` (tractor beam)
 - Flight Assist: `CTRL+Space`
@@ -133,7 +133,7 @@ money="xxxx"
 
 Where `xxxx` is the amount of money.
 
-*It's important to replace them all*, otherwise the change will not be applied correctly.
+_It's important to replace them all_, otherwise the change will not be applied correctly.
 
 ## Editing faction relations
 
@@ -468,8 +468,8 @@ station from outside its guns' range. A destroyer with some gun
 modifications will do nicely, even with green level modifications.
 
 > Tip: Open the information for the target station, and view its loadout.
-  Watch out for L-sized turrets, those are the ones you need to worry
-  about. From experience, if there are 9 or more, it's dangerous.
+> Watch out for L-sized turrets, those are the ones you need to worry
+> about. From experience, if there are 9 or more, it's dangerous.
 
 The biggest issue is that in my experience, using the AI to do a
 synchronized fleet attack or simple attack command will get your ships
@@ -491,8 +491,8 @@ will still have more than 80% hull left, which is what takes the most time
 to whittle down.
 
 > The AI rarely, if ever, attacks a station from above or below, from which
-  position it's easier to hit gun emplacements: You can see them all, and hit
-  everything without moving.
+> position it's easier to hit gun emplacements: You can see them all, and hit
+> everything without moving.
 
 ### Ship choices
 
@@ -555,7 +555,7 @@ If possible, use Rattlesnake destroyers as sector defenders.
 - Carriers are overkill, and fighters will get killed regardless
 
 > I used some "Syn" destroyers for patrolling: they got shot down
-  by Rattlesnake pirates, being way too slow.
+> by Rattlesnake pirates, being way too slow.
 
 ## Claiming sectors
 
@@ -566,7 +566,7 @@ If possible, use Rattlesnake destroyers as sector defenders.
 - No workforce is needed, if there are no production modules
 
 > As long as the admin center is the first module built, the station will be
-  considered a defense station, even if you turn it into a factory later.
+> considered a defense station, even if you turn it into a factory later.
 
 ## Locking down an enemy stargate
 
@@ -615,7 +615,7 @@ is better than 2200.
 
 - Use the [Station Calculator][] to simulate the build.
 - Make it as close to 100% workforce usage as possible.
-- Ideally, everything should be in the green(*) starting at ~10% workforce.
+- Ideally, everything should be in the green(\*) starting at ~10% workforce.
 
 * Profit as well as all production modules, raw resources like ore excluded.
 
@@ -630,8 +630,8 @@ not sell the surplus anywhere, unlike trading ships that sell surplus food
 for example. Once the storage is full, they will sit idle.
 
 > Your miners will tell you that they found no buyers. I always wondered why
-  they won't just sell to NPC stations. In fact, they have only a single
-  buyer - their station manager.
+> they won't just sell to NPC stations. In fact, they have only a single
+> buyer - their station manager.
 
 The idea is to have your trading station handle all raw resource deliveries
 to your production stations instead. This way the mining ships will not sit
@@ -647,7 +647,7 @@ A trading station is really simple to build:
 - Storage modules for all types
 
 > Do not add any production modules at all, it would confuse the station
-  manager.
+> manager.
 
 #### Trade ships setup
 
@@ -671,8 +671,8 @@ wasted. Only a few large ones will help with initial resource
 orders when a new production station is built.
 
 > Regarding piracy, since the medium trading ships will only
-  trade between your stations in-system, they are a lot less
-  exposed to piracy.
+> trade between your stations in-system, they are a lot less
+> exposed to piracy.
 
 #### How many trade ships?
 
@@ -683,9 +683,9 @@ to need in my experience. As a rule of thumb, I use this:
 - 6x medium traders per station per resource
 
 > As an example, in my last playthrough, my HQ's terraforming
-  trade station had 140 medium traders and 30 large miners
-  assigned to it. This handled production stations for everything
-  from raw resources, refined resources to processed wares.
+> trade station had 140 medium traders and 30 large miners
+> assigned to it. This handled production stations for everything
+> from raw resources, refined resources to processed wares.
 
 The best is to observe what happens over time. A few guidelines:
 
@@ -710,9 +710,9 @@ offer to the lowest price. This guarantees that your traders will
 prefer the trading station for all wares.
 
 > Adding all wares is actually a great way to see what wares you
-  don't control yourself, as those storages won't fill up at all.
-  In one playthrough, it helped me to notice that I had forgotten
-  to build a Microchip production station for example.
+> don't control yourself, as those storages won't fill up at all.
+> In one playthrough, it helped me to notice that I had forgotten
+> to build a Microchip production station for example.
 
 #### Selling surplus
 
@@ -741,7 +741,7 @@ all built this way.
 - [-] Very susceptible to ware shortages.
 - [-] A single ware shortage can stop production.
 
-#### Independent stations  
+#### Independent stations
 
 They include the workforce, and the whole chain of productions
 from food and intermediary products to the final product.
@@ -751,10 +751,10 @@ from food and intermediary products to the final product.
 - [+] Injects surplus back into the market.
 - [-] Complexity of the builds (saving plans is your friend).
 - [-] Expensive.
-- [-] Requires a lot of ships.  
+- [-] Requires a lot of ships.
 - [-] Idle miners once storage is full.
 
-#### Hybrid stations  
+#### Hybrid stations
 
 Built like independent stations, but relying on a trading station
 to provide all needed wares.
@@ -795,7 +795,6 @@ To find out which products stations build:
 - Fly to the station, and scan it to see its production modules.
 
 [Station Calculator]: http://www.x4-game.com/#/station-calculator
-
 [blueprint-ids.md]: https://github.com/Mistralys/x4-game-notes/blob/main/blueprint-ids.md
 [blueprint-ids.xml]: https://raw.githubusercontent.com/Mistralys/x4-game-notes/main/blueprint-ids.xml
 [Getting the Erlking]: #getting-the-erlking-battleship

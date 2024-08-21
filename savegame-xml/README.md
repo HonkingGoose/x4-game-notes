@@ -7,9 +7,9 @@ several gigabytes in size (their size increases over time as more objects and da
 
 ## Available example files
 
-> These were extracted from a long running game made with all expansions, including the the 
-  Kingdom's End expansion, which weighed ~1.2 GB. Some files have had their data cut down
-  to keep them readable (especially the logs).
+> These were extracted from a long running game made with all expansions, including the the
+> Kingdom's End expansion, which weighed ~1.2 GB. Some files have had their data cut down
+> to keep them readable (especially the logs).
 
 - [Global XML structure](https://github.com/Mistralys/x4-game-notes/blob/main/savegame-xml/structure.xml)
 - [Station](https://github.com/Mistralys/x4-game-notes/blob/main/savegame-xml/structure-station.xml)
@@ -30,14 +30,14 @@ several gigabytes in size (their size increases over time as more objects and da
 **Ships**
 
 - [S-size ship (transport, NPC)](https://github.com/Mistralys/x4-game-notes/blob/main/savegame-xml/structure-ship-s-transport.xml)
-- [L-size ship (destroyer, NPC)](https://github.com/Mistralys/x4-game-notes/blob/main/savegame-xml/structure-ship-l-destroyer.xml) 
+- [L-size ship (destroyer, NPC)](https://github.com/Mistralys/x4-game-notes/blob/main/savegame-xml/structure-ship-l-destroyer.xml)
 - [L-size ship (gas miner, player)](https://github.com/Mistralys/x4-game-notes/blob/main/savegame-xml/structure-ship-l-miner-player.xml)
 
 ## Notable tag paths
 
 Base path for all items in the galaxy:
 
-``` 
+```
 savegame.universe.component[class="galaxy"].connections
 ```
 
@@ -46,8 +46,7 @@ savegame.universe.component[class="galaxy"].connections
 - Sectors
   `{cluster}.connections.connection{+}.component[class="sector"]`
 - Regions
-  `{cluster}.connections.connection{+}.component[class="region"]` 
-  
+  `{cluster}.connections.connection{+}.component[class="region"]`
 
 ### Path syntax legend
 
