@@ -2,46 +2,75 @@
 
 ## Ship
 
+### Modes
+
 - Travel mode: `Shift + 1`
-- Scan mode: `Shift + 2`
-- Long scan mode: `Shift + 3` - Hold `L` to scan
+- Short-range scan mode: `Shift + 2`
+- Long-range scan mode: `Shift + 3`, hold `L` to scan
+- Disco mode: Use `Shift +1` then `Shift + 2`, then `Shift + 3`, then `Shift + 4`
+
+### Menu
+
 - Close menu: `Del`
 - Active ship menu: `Enter`
-- Afterburner: `Tab`
-- Autopilot toggle: `SHIFT+A`
-- Roll: `Q`, `E`
-- Speed+: `X`, `Mouse wheel`
-- Speed-: `Y`, `Mouse wheel`
-- Stop ship: `Backspace`
-- Mouse steering (toggle): `SHIFT+Space`
-- Mouse steering (manual): `Hold Left Mouse + Move`
-- Undock: `SHIFT+D`
-- Pick up items: `O` (tractor beam)
-- Flight Assist: `CTRL+Space`
-- Shoot: `Space`
-- Go back to ship: `SHIFT+D` (while on station)
 - Pause: Keyboard layout dependent; best to remap it.
 
-## Targeting
+### Speed
 
-- Target in front of ship: `T`  
-  or
-- Open the map, select item, press `T`
+- Boost: `Tab`
+- Increase ship speed: `X`, `Mouse wheel`
+- Reduce ship speed: `Y`, `Mouse wheel`
+- Stop ship: `Backspace`
 
-## Map
+### Steering
 
-- Rotate: `Q`, `E`, `Hold Right Mouse + Move`
-- Panning: `WASD` or `Hold Left Mouse + Move`
-- Zoom: Numpad `+` and `-` or `Mouse Wheel`
+- Toggle autopilot: `SHIFT+A`
+- Flight Assist: `CTRL+Space`
+- Roll ship: `Q`, `E`
+- Mouse steering (toggle): `SHIFT+Space`
+- Mouse steering (manual): `Hold Left Mouse + Move`
+
+### Docking
+
+- Request permission to dock: `SHIFT+D`
+- Undock: `SHIFT+D`
+- Go back to ship: `SHIFT+D` (while on same station)
+
+### Collecting items
+
+- Pick up items: `O` (tractor beam)
+
+### Targeting and Shooting
+
+- Target in front of ship: `T`
+- Open the map, select item, then use the `T` key
+- Shoot: `Space`
+
+## Map controls
+
+### Rotating
+
+- `Q` and `E` keys
+- `Hold Right Mouse + Move`
+
+### Panning
+
+- `WASD`
+- `Hold Left Mouse + Move`
+
+### Zoom
+
+- Numpad `+` and `-`
+- Scroll `Mouse Wheel`
 
 # Mining
 
 1. Ship menu, launch resource probe.
 2. Check out nearby asteroids.
-3. Fly close to the selected asteroid.
-4. Scan mode.
-5. Ship Menu > Change turret behavior to mining.
-6. When asteroid is depleted open the Ship Menu > Ore collector drone > Change status to "Armed".
+3. Fly close to the asteroid.
+4. Enable short-range scan mode.
+5. Open the Ship Menu, set turret behavior to mining.
+6. When the asteroid is depleted: open the Ship Menu > Ore collector drone(s) > Set status to "Armed".
 
 > NOTE: It seems the ore collector drone is not always needed, since the ship's tractor beam (`O` key) works as well.
 
@@ -110,14 +139,15 @@ or even to collapse XML tags.
 
 ## Savegame XML structure
 
-https://www.reddit.com/r/X4Foundations/comments/thjbik/how_to_read_save_file/
+See: [Reddit, X4 Foundations subreddit, how to read save file](https://www.reddit.com/r/X4Foundations/comments/thjbik/how_to_read_save_file/).
 
 ## Editing player money
 
-- Save your game and note the amount of money in your account.
+- Note the amount of money in your account.
+- Save the game.
 - Go to the samegame folder, usually in `Documents\Egosoft\X4\70814229\save`.
 - Extract the `.xml` file from the savegame `.gz` archive.
-- Open the XML file in a text reader.
+- Open the XML file in a text editor.
 - Replace all occurrences of the amount in the file.
 - Delete the `.gz` file and leave the `.xml` file.
   or
@@ -132,8 +162,7 @@ money="xxxx"
 ```
 
 Where `xxxx` is the amount of money.
-
-_It's important to replace them all_, otherwise the change will not be applied correctly.
+You must find and replace _all_ money values, or the new value will not be applied.
 
 ## Editing faction relations
 
@@ -150,7 +179,7 @@ Faction relations are defined by the following numerical ranges:
 
 Reputations from -0.1 to -0.31 result in fighting only the military.
 At -0.32 to -1 they kill everything.
-This means that the AI factions that are "at war" at -0.1 will already kill military ships on sight.
+So AI factions that are "at war" at -0.1, will kill military ships on sight.
 
 ## Editing player reputation
 
@@ -160,13 +189,14 @@ Under the faction tag:
 <faction id="argon">
 ```
 
-Insert the following, if it does not exist:
+Insert the following (if it does not exist already):
 
 ```
 <booster faction="player" relation="0.00999" time="3000.161"/>
 ```
 
-This sets reputation to `+9`, just before the switch to `+10`, to trigger the faction's military license reward.
+This sets reputation to `+9`, which is just before the switch to `+10`.
+This makes it so when you get `+10`, you get the message for that faction's military license reward.
 
 Example values:
 
@@ -175,25 +205,25 @@ Example values:
 
 ## Editing blueprints
 
-The following is a full list of blueprint macros / codes that I collected online, as well as through my own savegames.
+The following is a full list of blueprint macros/codes that I collected online, as well as through my own savegames.
 They go below the `<blueprints>` tag in the file (there is only one, so it's easy to find).
 
 The full categorized list of blueprints can be found in the [blueprint-ids.md][] file, and a copy & paste XML version in [blueprint-ids.xml][].
 
-The really cool thing is that it is even possible to make the Astrid and the Erlking buildable at player stations by adding their blueprints (for the Erlking, see [Getting the Erlking][]).
+The really cool thing is that it is even possible to make the Astrid and the Erlking buildable at player stations by adding their blueprints.
+For the Erlking, see [Getting the Erlking][].
 
 ## Player inventory
 
 NPCs have `<inventory>` tags just like the player, so the easiest way to find the player's inventory is to search for the player component.
 The inventory is nested in here.
-
-Search for the following:
+Search for:
 
 `class="player"`
 
 ### Modding parts
 
-These are all known parts that are used for modding ships.
+The known parts for modding ships:
 
 ```xml
 <ware ware="modpart_enginefuelinjector_t1" amount="9999"/>
@@ -217,7 +247,8 @@ These are all known parts that are used for modding ships.
 
 ### Inventory & crafting resources
 
-These are other inventory items used for crafting, as well as the objects the player can use, like the repair laser for the space suit.
+These are other inventory items used for crafting, as well as the objects the player can use.
+Like the repair laser, or the space suit.
 
 ```xml
 <ware ware="weapon_gen_spacesuit_repairlaser_01_mk1"/>
@@ -302,7 +333,7 @@ Items detected by the scan will display colored pulse hits in space.
 
 ## Teleportation
 
-Needs to be researched with the help of Boso and the player HQ.
+Needs to be researched with the help of Boso Ta and the player HQ.
 Starting the game, it is not possible to teleport anywhere, which can lead to funny situations if you accidentally fnd yourself stuck on an NPC ship for example.
 
 ## Teleporting to stations
